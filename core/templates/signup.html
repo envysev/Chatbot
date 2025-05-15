@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fafb;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        a {
+            display: inline-block;
+            margin: 0.5rem 0;
+            padding: 0.75rem 2rem;
+            background-color: #24292e; /* GitHub dark */
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(36,41,46,0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-size: 1.1rem;
+            user-select: none;
+        }
+
+        a:hover, a:focus {
+            background-color: #444c56;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(68,76,86,0.5);
+        }
+
+        /* Different style for the back link */
+        a.back {
+            background-color: #007bff;
+            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+        }
+
+        a.back:hover, a.back:focus {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0,86,179,0.5);
+        }
+    </style>
+</head>
+<body>
+    <h2>Signup with GitHub</h2>
+    <a href="{% url 'social:begin' 'github' %}">Signup with GitHub</a><br>
+    <a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+</body>
+</html>
