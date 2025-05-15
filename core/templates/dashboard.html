@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        /* Reset some default margins and paddings */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,123,255,0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            user-select: none;
+            font-size: 1.1rem;
+        }
+
+        a:hover,
+        a:focus {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0,86,179,0.5);
+            transform: scale(1.05);
+        }
+
+        /* Responsive: stack buttons on small screens */
+        @media (max-width: 400px) {
+            .links {
+                flex-direction: column;
+            }
+
+            a {
+                padding: 0.75rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Groq Chatbot</h1>
+    <div class="links">
+        <a href="{% url 'signup' %}">Signup</a>
+        <a href="{% url 'login' %}">Login</a>
+    </div>
+
+    <footer>© 2025 Groq Chatbot. All rights reserved.</footer>
+</body>
+</html>
